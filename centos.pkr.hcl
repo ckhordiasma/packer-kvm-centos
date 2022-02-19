@@ -1,5 +1,5 @@
 source "qemu" "example" {
-  iso_url          = "https://mirrors.centos.org/mirrorlist?path=/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-20220216.1-x86_64-boot.iso&redirect=1&protocol=https"
+  iso_url          = "https://mirrors.ocf.berkeley.edu/centos-stream/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-20220216.1-x86_64-boot.iso"
   iso_checksum     = "f11b2511eb3870100fd42a921a49d5ccca86fe510855e4774d70dfe6d10728be"
   output_directory = "output_centos"
   vm_name          = "centos_vm_test"
