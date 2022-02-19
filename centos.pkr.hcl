@@ -50,6 +50,8 @@ source "qemu" "example" {
 # Use graphical install
 graphical
 
+reboot --eject
+
 %addon com_redhat_kdump --enable --reserve-mb='auto'
 
 %end
@@ -78,6 +80,12 @@ timezone America/New_York --utc
 
 # Root password
 rootpw --iscrypted $6$F8dfcx4.H/2jNMSl$jUSGKy3ywHwnD98lzGZ6XTiv9x87qYavB9a0AdNunxammyQZJWP4q5KDw6M69OopYWf7vxzS4MU0/JDGSCcn10
+
+
+
+%post
+sed -i 's/^#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
+%end
 
 EOF
 
