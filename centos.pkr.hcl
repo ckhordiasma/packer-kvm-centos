@@ -4,9 +4,10 @@ source "qemu" "example" {
   output_directory = "output_centos"
   vm_name          = "centos_vm_test"
 
-  disk_size = "5000M"
+  disk_size = "10000M"
   memory    = 4096
-
+  cpus = 2
+  qemuargs = [["-cpu","host"]]
   ssh_username = "root"
   ssh_password = "centoscentos"
 
