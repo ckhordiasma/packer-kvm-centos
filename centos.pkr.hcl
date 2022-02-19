@@ -37,8 +37,9 @@ source "qemu" "example" {
   #  3. initiates boot sequence
   boot_command = [
     "<tab>",
-    "text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg",
-    "<wait><enter>"
+    "  ",
+    "inst.text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg",
+    "<wait5><enter>"
   ]
 
 
