@@ -68,7 +68,7 @@ lang en_US.UTF-8
 firstboot --enable
 
 # Generated using Blivet version 3.4.0
-ignoredisk --only-use=sda
+ignoredisk --only-use=vda
 autopart
 # Partition clearing information
 clearpart --none --initlabel
